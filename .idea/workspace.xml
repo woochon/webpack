@@ -118,7 +118,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../webpack/webpack09/webpack.config.js">
+        <entry file="file://$PROJECT_DIR$/webpack09/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
               <caret line="5" column="47" lean-forward="true" selection-end-line="74" />
@@ -163,11 +163,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="273" />
-    <option name="y" value="50" />
-    <option name="width" value="1653" />
-    <option name="height" value="1001" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="197" />
+    <option name="y" value="2" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -271,12 +271,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../webpack/webpack09/package.json">
+    <entry file="file://$PROJECT_DIR$/webpack09/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../webpack/webpack09/webpack.config.js">
+    <entry file="file://$PROJECT_DIR$/webpack09/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="5" column="47" lean-forward="true" selection-end-line="74" />
