@@ -10,6 +10,7 @@ import Count from './main/account.vue'
 import GoodList from './main/goodList.vue'
 import Login from './main/login.vue'
 import Register from './main/register.vue'
+console.log(process.env);
 const router = new VueRouter({
     routes:[
         {

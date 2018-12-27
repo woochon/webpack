@@ -1,5 +1,5 @@
 <template>
-    <div>登录</div>
+    <div class="login">登录</div>
 </template>
 <script>
     export default {
@@ -11,3 +11,8 @@
         }
     }
 </script>
+<style lang="scss" type="text/scss" scoped>
+    .login{
+        color: blue;
+    }
+</style>

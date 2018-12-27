@@ -1,5 +1,5 @@
 <template>
-    <div>goodList</div>
+    <div class="list">goodList</div>
 </template>
 <script>
     export default {
@@ -11,3 +11,8 @@
         }
     }
 </script>
+<style lang="scss" type="text/scss" scoped>
+    .list{
+        color: purple;
+    }
+</style>

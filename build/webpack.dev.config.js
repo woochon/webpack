@@ -2,25 +2,31 @@ const path = require('path');
 const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Ex = require('extract-text-webpack-plugin');
+console.log(process.env.ENV);
 module.exports = {
-    entry:path.join(__dirname,'./src/main.js'),
+    entry:path.join(__dirname,'../src/main.js'),
     output:{
-        path:path.join(__dirname,'./dist'),
-        filename:'bundle.js'
+        path:path.join(__dirname,'../dist'),
+        filename:'js/[name]-[hash:8].js'
     },
     devServer: {
         port:3000,
         hot:true,
         contentBase:'src',
-        open:false
+        open:true
     },
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV':JSON.stringify('1111'),
+        }),
         new VueLoaderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            template:path.join(__dirname,'./src/index.html'),
+            template:path.join(__dirname,'../src/index.html'),
             filename:'index.html'
-        })
+        }),
+        new Ex('css/[name]-[hash:8].css')
     ],
     module:{
         rules:[
@@ -34,15 +40,20 @@ module.exports = {
             },
             {
                 test:/\.scss/,
-                use:['style-loader','css-loader','less-loader','sass-loader']
+                exclude: /node_modules/,
+                // use:['style-loader','css-loader','less-loader','sass-loader']
+                use:Ex.extract({
+                    fallback: "style-loader",
+                    use: ["css-loader","less-loader","sass-loader"]
+                })
             },
             {
                 test:/\.(png|gif|bmp|jpeg)$/,
-                use:'url-loader?limit=1000&name=[hash:8]-[name].[ext]',
+                use:'url-loader?limit=1000&name=images/[hash:8]-[name].[ext]',
             },
             {
                 test:/\.(ttf|eot|svg|woff|woff2)$/,
-                use:'url-loader'
+                use:'url-loader',
             },
             /*{
                 test:/\.js$/,
