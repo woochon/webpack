@@ -1,7 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="6949a426-f832-4781-92c5-61a6b19ecad3" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="6949a426-f832-4781-92c5-61a6b19ecad3" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/webpack.base.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/dojo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/webpack.dev.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/webpack.dev.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/webpack.pro.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/webpack.pro.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/lib/post_install.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/lib/post_install.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/.bin/uglifyjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/.bin/uglifyjs.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/camelcase/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/camelcase/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/camelcase/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/camelcase/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/cliui/.coveralls.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/cliui/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/cliui/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/cliui/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/cliui/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/cliui/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/cliui/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/cliui/test/cliui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/bin/extract-props.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/bin/uglifyjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/lib/ast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/lib/compress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/lib/mozilla-ast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/lib/output.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/lib/parse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/lib/propmangle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/lib/scope.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/lib/sourcemap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/lib/transform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/tools/domprops.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/tools/exports.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/tools/node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/uglify-js/tools/props.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/yargs/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/yargs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/yargs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/yargs/completion.sh.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/yargs/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/yargs/lib/completion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/yargs/lib/parser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/yargs/lib/usage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/yargs/lib/validation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/node_modules/yargs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/account.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/account.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/goodList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/goodList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.txt" beforeDir="false" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
+    </list>
+>>>>>>> 369f51c4644472ad4ef357238c8fb65f294f127d
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -87,7 +162,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="488" />
+          <entry key="js" value="490" />
           <entry key="json" value="95" />
           <entry key="md" value="728" />
           <entry key="vue" value="251" />
@@ -96,9 +171,16 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="95" />
-          <entry key="JavaScript" value="488" />
+          <entry key="JavaScript" value="490" />
           <entry key="PLAIN_TEXT" value="728" />
           <entry key="Vue.js" value="251" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.144" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -108,25 +190,69 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="280">
               <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="29" selection-end-column="34" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="252">
+              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+=======
+            <state relative-caret-position="84">
+              <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
+>>>>>>> 369f51c4644472ad4ef357238c8fb65f294f127d
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/build/webpack.pro.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="e#342#435#0" />
+                <element signature="e#452#541#0" />
+                <element signature="e#556#933#0" />
+                <element signature="e#591#661#0" />
+                <element signature="e#775#883#0" />
+                <element signature="e#946#2435#0" />
+                <element signature="e#976#1072#0" />
+                <element signature="e#1086#1196#0" />
+                <element signature="e#1210#1544#0" />
+                <element signature="e#1558#1698#0" />
+                <element signature="e#1827#1973#0" />
+                <element signature="e#1986#2326#0" />
+                <element signature="e#2340#2419#0" />
+                <element signature="e#2441#2537#0" />
+              </folding>
+            </state>
+          </provider>
+=======
         <entry file="file://$PROJECT_DIR$/src/main/register.vue">
           <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="144">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#116#137#0" expanded="true" />
+                <element signature="e#193#220#0" expanded="true" />
+=======
             <state relative-caret-position="252">
               <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
               <folding>
                 <element signature="e#116#138#0" expanded="true" />
                 <element signature="e#195#223#0" expanded="true" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
               </folding>
             </state>
           </provider>
@@ -149,8 +275,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/webpack.dev.config.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="792">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+=======
             <state relative-caret-position="102">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
             </state>
           </provider>
         </entry>
@@ -167,8 +298,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="62">
+              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+=======
             <state relative-caret-position="-1144">
               <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
             </state>
           </provider>
         </entry>
@@ -176,8 +312,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/webpack.base.config.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="1044">
+              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+=======
             <state relative-caret-position="2072">
               <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
             </state>
           </provider>
         </entry>
@@ -253,9 +394,16 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+    <option name="x" value="13" />
+    <option name="y" value="28" />
+    <option name="width" value="1386" />
+    <option name="height" value="731" />
+=======
     <option name="x" value="50" />
     <option name="width" value="1653" />
     <option name="height" value="1076" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -339,14 +487,26 @@
       <updated>1545835749558</updated>
       <workItem from="1545835752646" duration="705000" />
       <workItem from="1545838321676" duration="1164000" />
+      <workItem from="1545958683494" duration="1115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="32290000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="20313000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="13" y="28" width="1386" height="731" extended-state="0" />
+=======
+    <option name="totallyTimeSpent" value="31858000" />
+>>>>>>> 369f51c4644472ad4ef357238c8fb65f294f127d
   </component>
   <component name="ToolWindowManager">
     <frame x="50" y="0" width="1653" height="1076" extended-state="0" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22077115" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -360,8 +520,17 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.5678392" />
+=======
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.74370205" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.61883897" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
+>>>>>>> 369f51c4644472ad4ef357238c8fb65f294f127d
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -409,6 +578,25 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/dist/css/main-0a7eaba9.css" />
+    <entry file="file://$PROJECT_DIR$/dist/index.html" />
+    <entry file="file://$PROJECT_DIR$/dist/js/main-0a7eaba9.js" />
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/webpack.pro.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+=======
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -436,17 +624,42 @@
     <entry file="file://$PROJECT_DIR$/dist/js/main-92d2a0a8.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-354189">
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#342#435#0" />
+            <element signature="e#452#541#0" />
+            <element signature="e#556#933#0" />
+            <element signature="e#591#661#0" />
+            <element signature="e#775#883#0" />
+            <element signature="e#946#2435#0" />
+            <element signature="e#976#1072#0" />
+            <element signature="e#1086#1196#0" />
+            <element signature="e#1210#1544#0" />
+            <element signature="e#1558#1698#0" />
+            <element signature="e#1827#1973#0" />
+            <element signature="e#1986#2326#0" />
+            <element signature="e#2340#2419#0" />
+            <element signature="e#2441#2537#0" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#116#137#0" expanded="true" />
+            <element signature="e#193#220#0" expanded="true" />
+=======
     <entry file="file://$PROJECT_DIR$/dist/js/main-a3caa9d5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-335681">
           <folding>
             <element signature="n#!!doc" expanded="true" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
           </folding>
         </state>
       </provider>
@@ -460,15 +673,33 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/goodList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+=======
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/uglifyjs-webpack-plugin/dist/index.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="792">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+=======
         <state relative-caret-position="-331">
           <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
         </state>
@@ -480,6 +711,7 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
         </state>
       </provider>
     </entry>
@@ -488,11 +720,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/webpack.pro.config.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1044">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+=======
         <state relative-caret-position="391">
           <caret line="25" column="10" selection-start-line="19" selection-start-column="8" selection-end-line="25" selection-end-column="10" />
           <folding>
             <element signature="e#1140#1236#0" />
           </folding>
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
         </state>
       </provider>
     </entry>
@@ -504,6 +741,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack.config.js">
+<<<<<<< HEAD
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+=======
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-112">
           <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
@@ -571,6 +813,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="280">
           <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="29" selection-end-column="34" />
         </state>
@@ -580,6 +823,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-473">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+=======
+        <state relative-caret-position="84">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+>>>>>>> 75092cc71a326f30f7a5c01e3aa2d90de19321d4
+>>>>>>> 369f51c4644472ad4ef357238c8fb65f294f127d
         </state>
       </provider>
     </entry>
