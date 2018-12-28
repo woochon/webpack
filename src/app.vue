@@ -17,8 +17,13 @@ export default{
 </script>
 <style lang="scss" type="text/scss">
   @import './common/scss/index';
+  body{
+    background-color: #fff;
+  }
   #app{
     min-height: 500px;
-    min-width: 700px;
+    width: 1500px;
+    background-color: #2c3f55;
+    margin: 0 auto;
   }
 </style>
