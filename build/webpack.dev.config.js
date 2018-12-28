@@ -3,6 +3,18 @@ const base = require('./webpack.base.config');
 const webpack = require('webpack');
 const path = require('path');
 module.exports = webpackMerge(base,{
+    output:{
+        publicPath: '/'
+    },
+    devServer: {
+        port:3000,
+        hot:true,
+        contentBase:'src',
+        open:false,
+        historyApiFallback: {
+            index: '/index.html' //与output的publicPath有关(HTMLplugin生成的html默认为index.html)
+        }
+    },
     resolve:{
         alias:{
             "vue$":"vue/dist/vue.esm.js" //修改vue包的导入路径

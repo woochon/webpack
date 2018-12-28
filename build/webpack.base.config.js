@@ -76,10 +76,12 @@ module.exports = {
         ]
     },
     /* 起别名 */
-    /*resolve: {
-        extensions: ['.js'],
+    resolve: {
+        extensions: ['.js', '.vue','.scss'],
         alias: {
-            src: path.resolve(__dirname, './../src')
+            src:path.resolve(__dirname,'../src'),
+            components:path.resolve(__dirname,'../src/components'),
+            base:path.resolve(__dirname,'../src/base')
         }
-    },*/
+    },
 };

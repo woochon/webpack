@@ -1,20 +1,7 @@
 <template>
-  <div class="app">
-    {{ msg }}
-    <img
-      src="./images/dojo.png"
-      alt=""
-    >
-    <img
-      src="./images/dojo.png"
-      alt=""
-    >
-    <RouterLink to="/account">
-      Account
-    </RouterLink>
-    <RouterLink to="/goodList">
-      goodList
-    </RouterLink>
+  <div id="app">
+    <!--<router-link to="/">登录</router-link>
+    <router-link to="/home">首页</router-link>-->
     <RouterView />
   </div>
 </template>
@@ -28,9 +15,10 @@ export default{
   }
 };
 </script>
-<style lang="scss" type="text/scss" scoped>
-    .app{
-        color: red;
-        margin: 10px 30px;
-    }
+<style lang="scss" type="text/scss">
+  @import './common/scss/index';
+  #app{
+    min-height: 500px;
+    min-width: 700px;
+  }
 </style>
