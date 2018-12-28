@@ -1,15 +1,17 @@
 <template>
-    <div class="list">goodList</div>
+  <div class="list">
+    goodList
+  </div>
 </template>
 <script>
-    export default {
-        name:'count',
-        data(){
-            return {
+export default {
+  name:"Count",
+  data(){
+    return {
 
-            }
-        }
-    }
+    };
+  }
+};
 </script>
 <style lang="scss" type="text/scss" scoped>
     .list{

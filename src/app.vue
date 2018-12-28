@@ -1,20 +1,32 @@
 <template>
-    <div class="app">
-        {{msg}}
-        <router-link to="/account">Account</router-link>
-        <router-link to="/goodList">goodList</router-link>
-        <router-view></router-view>
-    </div>
+  <div class="app">
+    {{ msg }}
+    <img
+      src="./images/dojo.png"
+      alt=""
+    >
+    <img
+      src="./images/dojo.png"
+      alt=""
+    >
+    <RouterLink to="/account">
+      Account
+    </RouterLink>
+    <RouterLink to="/goodList">
+      goodList
+    </RouterLink>
+    <RouterView />
+  </div>
 </template>
 <script>
-    export default{
-        name:'app',
-        data(){
-            return {
-                msg:'app组件'
-            }
-        }
-    }
+export default{
+  name:"App",
+  data(){
+    return {
+      msg:"app组件"
+    };
+  }
+};
 </script>
 <style lang="scss" type="text/scss" scoped>
     .app{

@@ -25,9 +25,32 @@ new HtmlWebpackPlugin({
 - *unix和windows设置NODE_ENV的语句有所差异，此处用到了一个库cross-env以达到兼容的目的  npm install cross-env --save-dev,以此来在命令行设置环境 cross-env NODE_ENV=production
 - 在vue-cli中，npm run build的环境变量是有build/build.js赋值得到的
 - 用命令行得到的环境变量只能在webpack.config.js文件中使用
+- webpack-merge 合并一些webpack配置
 
+## 引入图片的时候 要加 ./   否则图片加载不出来？  引入js文件的时候也是这样
+- 添加 publicPath: '/'无效
 ## webpack环境分离
 - 新建一个build,里面专门来执行一些打包
+- 每次打包前先清除dist目录及该文件夹下所有的文件, clean-webpack-plugin
+- 打包的时候压缩文件 uglifyjs-webpack-plugin
+- 压缩代码时，按照给定的版本的uglifyjs-webpack-plugin，采用new UglifyJSPlugin()报错;可采用new webpack.optimize.UglifyJsPlugin()
+- 压缩代码时，去掉console.log()
+```
+new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+                drop_debugger: true,
+                drop_console: true
+            }
+        })
+```
+
+## 先羡慕中使用eslint配置时，与babel-loader的匹配冲突
+- 在.eslintrc.js中添加 parser:'babel-eslint'
+- 报错Parsing error: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>?
+- 安装 npm install eslint-plugin-vue --save-dev，并在.eslintrc.js文件中将parser:'babel-eslint'改成parserOptions:{parse:'babel-eslint'}，
+
+
 
 
 
