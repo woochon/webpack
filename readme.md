@@ -34,4 +34,49 @@ resolve: {
 ## 表单中几个汉字对齐问题
 - https://www.cnblogs.com/huhunet/p/6478649.html
 
+## 根据某个值来动态的绑定不同的class
+- 第一种适合2中情况
+```
+<i :class= "item.IsTmall? 'tmall' : 'taobao'"></i>    // 这行代码是重点
+```
+- 第二种可以使用于多种情况
+```
+:class="iconDir(item.show)"
+iconDir(flag){
+    return flag?'glyphicon-menu-down':'glyphicon-menu-up'
+}
+```
+
+## 性能
+- 估计这种写法不好
+```
+<div class="state">
+    <span v-if="item.state===0">禁止</span>
+    <span v-if="item.state===1">激活</span>
+</div>
+```
+- 推荐
+```
+states:['禁止','激活']
+<div class="state">
+    <span>{{states[item.state]}}</span>
+</div>
+```
+
+## 左侧导航二次菜单的折叠问题：
+```
+.fade-enter{
+        height: 0px;
+    }
+    .fade-enter-to{
+        height: 100px;
+    }
+    .fade-enter-active{
+        transition:height 0.5s;
+    }
+```
+- 看起来非常呆板，且样式不对
+- https://blog.csdn.net/DeepLies/article/details/76696579
+
+
 
