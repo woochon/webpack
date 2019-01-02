@@ -98,7 +98,7 @@ export default {
       .right{
         flex: 1;
         min-width: 900px;
-        background-color: red;
+        background-color: #fff;
         height: 1200px;
       }
     }

@@ -35,6 +35,12 @@ export default {
     return {
 
     };
+  },
+  created(){
+      console.log(this.$route.query.data);
+      const tmp=this.$route.query.data;
+      /*console.log(this.$decrypt(tmp));
+      console.log(typeof(tmp),'======');*/
   }
 };
 </script>
@@ -68,15 +74,16 @@ export default {
             width: 340px;
             border-radius: 3px;
             border:1px solid gray;
+            outline: none;
             padding-left: 12px;
             &.special{
               width: 200px;
             }
             &:active{/*文本框获取激活时的样式*/
-              border:1px solid $color-background-t;
+              border:1px solid $color-sub-theme;
             }
             &:focus{/*文本框获取焦点时的样式*/
-              border:1px solid $color-background-t;
+              border:1px solid $color-sub-theme;
             }
           }
           .identify{

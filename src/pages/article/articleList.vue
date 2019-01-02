@@ -1,0 +1,100 @@
+<template>
+    <div class="add-article">
+        <h2>文章内容列表</h2>
+        <div class="main-wrapper">
+            <MyTable :titles="titles" :data="articleList"></MyTable>
+        </div>
+    </div>
+</template>
+<script>
+    import MyTable from 'components/myTable2'
+    export default{
+        name:'add-article',
+        data(){
+            return {
+                titles:[
+                    {
+                        label:'标题',
+                        key:'title'
+                    },
+                    {
+                        label:'分类',
+                        key:'category'
+                    },
+                    {
+                        label:'发布时间',
+                        key:'time'
+                    },
+                    {
+                        label:'热门',
+                        key:'hot'
+                    },
+                    {
+                        label:"精品",
+                        key:'best'
+                    },
+                    {
+                        label:'最新',
+                        key:"new"
+                    }
+                ],
+                articleList:[
+                    {
+                        title:'koa2',
+                        category:'后台',
+                        time:'2019-01-02',
+                        hot:true,
+                        best:true,
+                        new:true
+                    },
+                    {
+                        title:'koa2',
+                        category:'后台',
+                        time:'2019-01-02',
+                        hot:true,
+                        best:true,
+                        new:true
+                    },
+                    {
+                        title:'koa2',
+                        category:'后台',
+                        time:'2019-01-02',
+                        hot:true,
+                        best:true,
+                        new:true
+                    },
+                    {
+                        title:'koa2',
+                        category:'后台',
+                        time:'2019-01-02',
+                        hot:true,
+                        best:true,
+                        new:true
+                    },
+                    {
+                        title:'koa2',
+                        category:'后台',
+                        time:'2019-01-02',
+                        hot:true,
+                        best:true,
+                        new:true
+                    },
+                    {
+                        title:'koa2',
+                        category:'后台',
+                        time:'2019-01-02',
+                        hot:true,
+                        best:true,
+                        new:true
+                    }
+                ]
+            }
+        },
+        components:{
+            MyTable
+        },
+        methods:{
+
+        }
+    }
+</script>

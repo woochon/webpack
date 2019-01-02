@@ -77,21 +77,21 @@
                     },
                     {
                         icon:'glyphicon-film',
-                        mainTitle:'分类管理',
+                        mainTitle:'文章管理',
                         navTo:'/home',
                         show:false,
                         children:[
                             {
-                                subTitle:'增加轮播',
-                                navTo:'/home'
+                                subTitle:'文章列表',
+                                navTo:'/conManage/conList'
                             },
                             {
-                                subTitle:'删除轮播',
-                                navTo:'/home'
+                                subTitle:'增加分类',
+                                navTo:'/conManage/addCon'
                             },
                             {
-                                subTitle:'增加管理员',
-                                navTo:'/home'
+                                subTitle:'编写文章',
+                                navTo:'/conManage/editCon'
                             }
                         ]
                     },
@@ -101,7 +101,7 @@
         mounted(){
             //默认将一级菜单的第一个打开
             let count=0;
-            count =this.$refs.categ[0].childElementCount;
+            count =this.navList[0].children.length;
             let allHeight = (count+1) * 40;
             this.$refs.categ[0].style.height=allHeight+'px';
         },
@@ -112,7 +112,7 @@
                     this.navList.forEach((item,key)=>{
                         if(index===key){
                             item.show=true;
-                            count =this.$refs.categ[index].childElementCount;
+                            count =this.navList[index].children.length;
                             let allHeight = (count+1) * 40;
                             this.$refs.categ[index].style.height=allHeight+'px';
                         }else{

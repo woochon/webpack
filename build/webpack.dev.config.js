@@ -7,7 +7,7 @@ module.exports = webpackMerge(base,{
         publicPath: '/'
     },
     devServer: {
-        port:3000,
+        port:8000,
         hot:true,
         contentBase:'src',
         open:false,
