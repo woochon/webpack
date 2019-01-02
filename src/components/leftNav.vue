@@ -83,7 +83,7 @@
                         children:[
                             {
                                 subTitle:'增加轮播',
-                                navTo:'/home'
+                                navTo:'/conManage/conList'
                             },
                             {
                                 subTitle:'删除轮播',

@@ -20,7 +20,11 @@ module.exports = {
             template:path.join(__dirname,'../src/index.html'),
             filename:'index.html'
         }),
-        new Ex('css/[name]-[hash:8].css')
+        new Ex('css/[name]-[hash:8].css'),
+        new webpack.optimize.CommonsChunkPlugin({
+            name:'commons',
+            filename:'commons.js'
+        })
     ],
     module:{
         rules:[

@@ -10,6 +10,7 @@ import PersonCenter from '../pages/user/personCenter'
 import Banner from '../pages/banner/bannerList'
 import Nav from '../pages/nav/menuNav'
 import DelNav from '../pages/nav/delList'
+import ConList from '../pages/conList/conList'
 // console.log(process.env);
 const router = new VueRouter({
     mode: 'history', //去掉路径上  的'#'
@@ -60,6 +61,17 @@ const router = new VueRouter({
                 {
                     path:'bannerList',
                     component:Banner
+                }
+            ]
+        },
+        {
+            path:"/conManage",
+            component:Home,
+            redirect:'/conManage/conList',
+            children:[
+                {
+                    path:'conList',
+                    component:ConList
                 }
             ]
         }
