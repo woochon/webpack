@@ -1,6 +1,13 @@
 <template>
     <div class="operation">
-
+        <div class="state-0" v-if="state===0">
+            <span>激活</span>
+            <span>删除</span>
+        </div>
+        <div class="state-1" v-else>
+            <span>禁止</span>
+            <span>编辑</span>
+        </div>
     </div>
 </template>
 <script>
@@ -12,13 +19,16 @@
             }
         },
         props:{
-            info:{
+            state:{
                 require:true,
-                type:Object
+                type:Number
             }
         },
+        created(){
+            console.log(this.state,'created');
+        },
         mounted(){
-            console.log(this.info);
+            console.log(this.state,'mounted');
         }
     }
 </script>

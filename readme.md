@@ -77,6 +77,12 @@ states:['禁止','激活']
 ```
 - 看起来非常呆板，且样式不对
 - https://blog.csdn.net/DeepLies/article/details/76696579
+- 左侧导航纠结了很久，才发现是因为高度设置出现问题：应该给每一个一级菜单的li设置初始高度，然后将二级菜单的高度叠加到一级菜单上
 
+## render函数
+- https://www.cnblogs.com/moqiutao/p/8335077.html
+- http://www.php.cn/js-tutorial-401997.html
+- render函数，我是真的认真考了许多遍官方文档还有看了很多博客，但是真的没有很大的帮助，建议从一个例子着手，也就是usrList里面的操作渲染
+- render函数相当于是.vue组件中的template
 
 

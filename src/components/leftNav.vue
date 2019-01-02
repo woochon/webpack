@@ -1,13 +1,13 @@
 <template>
     <div class="left-nav">
         <ul class="sup-wrapper">
-            <li v-for="(item,index) in navList" :key="index" class="main-title">
+            <li v-for="(item,index) in navList" :key="index" class="main-title"  ref="categ">
                 <div class="sup" @click="drop(item,index)">
                     <span class="glyphicon" aria-hidden="true" :class="item.icon"></span>
                     <span class="main-nav">{{item.mainTitle}}</span>
                     <span class="glyphicon" :class="iconDir(item.show)" ref="icon"></span>
                 </div>
-                <ul class="sub-title" ref="categ">
+                <ul class="sub-title">
                     <li v-for="(sub,key) in item.children" :key="key" class="detail-title">
                         <router-link tag="div" :to="sub.navTo">{{sub.subTitle}}</router-link>
                     </li>
@@ -98,6 +98,13 @@
                 ]
             }
         },
+        mounted(){
+            //默认将一级菜单的第一个打开
+            let count=0;
+            count =this.$refs.categ[0].childElementCount;
+            let allHeight = (count+1) * 40;
+            this.$refs.categ[0].style.height=allHeight+'px';
+        },
         methods:{
             drop(item,index){
                 this.$nextTick(()=>{
@@ -106,14 +113,13 @@
                         if(index===key){
                             item.show=true;
                             count =this.$refs.categ[index].childElementCount;
+                            let allHeight = (count+1) * 40;
+                            this.$refs.categ[index].style.height=allHeight+'px';
                         }else{
                             item.show=false;
+                            this.$refs.categ[key].style.height='40px';
                         }
                     });
-                    let allHeight = count * 40;
-                    /*this.$refs.categ[index].style.display='block';*/
-                    this.$refs.categ[index].style.height=allHeight+'px';
-                    this.$router.push({path:item.navTo});
                 });
             },
             iconDir(flag){
@@ -125,19 +131,11 @@
 <style lang="scss" type="text/scss" scoped>
     @import '../common/scss/variable.scss';
     .router-link-active{
-        color: $color-text-blue;
+        color: $color-text;
+        background-color: $color-text-blue;
     }
-    /*.fade-enter{
-        height: 0px;
-    }
-    .fade-enter-to{
-        height: 100%;
-    }
-    .fade-enter-active{
-        transition:height 2s;
-    }*/
-
     li{
+        height: 40px;
         line-height: 40px;
     }
     .left-nav{
@@ -146,6 +144,10 @@
         color: $color-text-ll;
         .sup-wrapper{
             padding-top: 30px;
+            .main-title{
+                overflow: hidden;
+                transition: height 1s;
+            }
             .sup{
                 padding-left: 20px;
                 .main-nav{
@@ -153,13 +155,9 @@
                 }
             }
             .sub-title{
-                height: 0px;
-                /*display: none;*/
-                width: 100%;
                 background-color: $color-background-t2;
-                transition: height 3s;
                 .detail-title{
-                    padding-left: 35px;
+                    text-indent: 35px;
                 }
             }
         }

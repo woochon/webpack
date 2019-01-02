@@ -3,7 +3,7 @@ export function hasClass(obj, cls) {
 }
 
 export function addClass(obj, cls) {
-    if (!this.hasClass(obj, cls)) obj.className += " " + cls;
+    if (!hasClass(obj, cls)) obj.className += " " + cls;
 }
 
 export function removeClass(obj, cls) {
