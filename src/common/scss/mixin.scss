@@ -1,0 +1,10 @@
+input,textarea,select,option{
+    border:1px solid #666;
+    outline:none;
+    &:active{/*文本框获取激活时的样式*/
+        border:1px solid #d93f30;
+    }
+    &:focus{/*文本框获取焦点时的样式*/
+        border:1px solid #d93f30;
+    }
+}

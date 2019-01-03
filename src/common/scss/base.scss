@@ -5,6 +5,12 @@ body, html{
   font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  background: $color-background;
+  color: $color-text;
+}
+.my-btn-long{
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
   color: $color-text;
 }

@@ -195,6 +195,11 @@ export default {
         height:24px;
         line-height:24px;
         text-align: center;
+        border:1px solid gray;
+        outline: none;
+    }
+    #page>div>.jump>input:active,#page>div>.jump>input:focus{
+        border:1px solid blue;
     }
     ul{
         height:30px;
