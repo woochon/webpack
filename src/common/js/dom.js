@@ -20,3 +20,11 @@ export function toggleClass(obj,cls){
         addClass(obj, cls);
     }
 }
+
+export function validate(str,reg){
+    return reg.test(str);
+}
+
+export function isEmpty(str){
+    return str===''||(!str);
+}
