@@ -41,56 +41,37 @@
             </div>
             <div v-show="currentIndex===1">
                 <h3>内容设置</h3>
-                <div class="item">
-                    <label for="email">分类名称</label>
-                    <input type="text" id="email" class="theme" placeholder="请输入邮箱">
+                <!--<button @click="getUEContent()">获取内容</button>
+                <div class="editor-container">
+                    <UE :defaultMsg=defaultMsg :config=config ref="ue"></UE>
+                </div>-->
+                <div class="add-article-con">
+                    <p>{{warm}}</p>
+                    <textarea v-model="ueditor" class="ueditor">
+                    </textarea>
                 </div>
+                <vueUEditor  @ready="editorReady"></vueUEditor>
                 <div class="item">
-                    <label for="pwd">上级分类</label>
-                    <input type="text"  class="theme" placeholder="请输入邮箱">
-                </div>
-                <div class="item">
-                    <label for="re_PWD">关键字</label>
-                    <input type="text"  class="theme special" placeholder="请输入邮箱">
-                    <!--<img src="../images/tmp.png" alt="" class="identify">-->
-                    <span class="identify"></span>
-                </div>
-                <div class="item">
-                    <label for="pwd">状态</label>
-                    <input type="text"  class="theme" placeholder="请输入邮箱">
-                </div>
-                <div class="item">
-                    <label for="pwd">描述</label>
-                    <input type="text"  class="theme" placeholder="请输入邮箱">
+                    <div class="my-btn-long extra-btn" @click="secondNext()">下一步</div>
                 </div>
             </div>
             <div v-show="currentIndex===2">
                 <h3>SEO设置</h3>
                 <div class="item">
-                    <label for="email">分类名称</label>
-                    <input type="text" class="theme" placeholder="请输入邮箱">
+                    <label for="website">分类名称</label>
+                    <input type="text" class="input-info" placeholder="网站名" id="website" v-model="website">
                 </div>
                 <div class="item">
-                    <label for="pwd">上级分类</label>
-                    <input type="text" id="pwd" class="theme" placeholder="请输入邮箱">
+                    <label for="websiteKeyWorlds">网站关键</label>
+                    <input type="text" id="websiteKeyWorlds" class="input-info" placeholder="请输入网站关键字" v-model="websiteKeyWorlds">
                 </div>
                 <div class="item">
-                    <label for="re_PWD">关键字</label>
-                    <input type="text" id="re_PWD" class="theme special" placeholder="请输入邮箱">
-                    <!--<img src="../images/tmp.png" alt="" class="identify">-->
-                    <span class="identify"></span>
+                    <label for="websiteUpdateTime">更新时间</label>
+                    <input type="text" id="websiteUpdateTime" class="input-info" placeholder="请输入网站更新时间" v-model="websiteUpdateTime">
                 </div>
                 <div class="item">
-                    <label for="pwd">状态</label>
-                    <input type="text"  class="theme" placeholder="请输入邮箱">
+                    <div class="my-btn-long extra-btn" @click="postInfo()">提交</div>
                 </div>
-                <div class="item">
-                    <label for="pwd">描述</label>
-                    <input type="text"  class="theme" placeholder="请输入邮箱">
-                </div>
-            </div>
-            <div class="btn-wrapper">
-                <div class="my-btn-long extra-btn" @click="postInfo">提交</div>
             </div>
         </div>
         <Dialogs v-model="showDialog">
@@ -104,8 +85,10 @@
     </div>
 </template>
 <script>
+    import vueUEditor from 'vue-ueditor';
     import {isEmpty} from "common/js/dom";
     import Dialogs from 'components/dialogs';
+    import UE from 'components/ueditor';
     export default{
         name:'add-article',
         data(){
@@ -133,27 +116,61 @@
                 authorName:'',
                 showDialog:false,
                 tmpImg:'../images/tmp.png',
+                defaultMsg: '这里是UE测试',
+                config: {
+                    initialFrameWidth: null,
+                    initialFrameHeight: 350
+                },
+                warm:'目前只能使用html方式编写，uediot配置出现问题',
+                ueditor:'',
+                website:'',
+                websiteKeyWorlds:'',
+                websiteUpdateTime:'',
             }
         },
         components:{
-            Dialogs
+            Dialogs,
+            UE,
+            vueUEditor
         },
         methods:{
+            editorReady(){
+                editorInstance.setContent('adxa');
+                editorInstance.addListener('contentChange',()=>{
+                    console.log(editorInstance.getContent());
+                })
+            },
             toggle(index){
                 this.currentIndex=index;
             },
             postInfo(){
-                console.log(isEmpty(this.articleName));
-                if(isEmpty(this.articleName)){
-                    this.msg='标题不能为空';
+                if(isEmpty(this.website)){
+                    this.msg='网站名不能为空';
                     this.showDialog=true;
                     return ;
                 }
-                if(isEmpty(this.authorName)){
-                    this.msg='作者名不能为空';
+                if(isEmpty(this.websiteKeyWorlds)){
+                    this.msg='网站关键字不能为空';
                     this.showDialog=true;
                     return ;
                 }
+                if(isEmpty(this.websiteUpdateTime)){
+                    this.msg='更新时间不能为空';
+                    this.showDialog=true;
+                    return ;
+                }
+                const params ={
+                    title:this.articleName,
+                    category:this.categoryName,
+                    corvorImg:this.tmpImg,
+                    author:this.authorName,
+                    recommend:this.recommend,
+                    content:this.ueditor,
+                    website:this.website,
+                    websiteKeyWorlds:this.websiteKeyWorlds,
+                    websiteUpdateTime:this.websiteUpdateTime
+                };
+                console.log(params,'123');
             },
             cancelDialogs(){
                 this.msg='';
@@ -169,11 +186,19 @@
                     return ;
                 }
                 // 创建url
-                let imgUrl=window.URL.createObjectURL(file);
+                /*let imgUrl=window.URL.createObjectURL(file);
                 this.tmpImg=imgUrl;
                 this.$refs.uploadImg.onload=function(){
                     console.log('图片加载成功');
                     URL.revokeObjectURL(imgUrl);
+                }*/
+                let reader = new FileReader();
+                reader.readAsDataURL(file);
+                let _this= this; //必不可少，reader.onload的this指向问题
+                reader.onload=function(e){
+                    console.log(e);
+                    console.log(e.target.result);
+                    _this.tmpImg=e.target.result;
                 }
             },
             firstNext(){
@@ -201,6 +226,18 @@
                 }*/
                 console.log(this.recommend);
                 this.currentIndex=1;
+            },
+            /*getUEContent() {
+                let content = this.$refs.ue.getUEContent();
+                console.log(content)
+            },*/
+            secondNext(){
+                if(isEmpty(this.ueditor)){
+                    this.showDialog=true;
+                    this.msg='内容不能为空';
+                    return ;
+                }
+                this.currentIndex=2;
             }
         }
     }
@@ -265,6 +302,15 @@
                         color: red;
                         background-color: blue;
                         width: 100%;
+                    }
+                }
+                .add-article-con{
+                    width: 1200px;
+                    .ueditor{
+                        width: 100%;
+                        height: 600px;
+                        background-color: $color-background;
+                        color: $color-text;
                     }
                 }
             }
