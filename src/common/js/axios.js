@@ -2,6 +2,7 @@ import axios from 'axios';
 import qs from 'qs';
 
 export default function request(url, type, params) {
+    console.log(params);
     if (type === 'post') {
         params=qs.stringify(params)
     }

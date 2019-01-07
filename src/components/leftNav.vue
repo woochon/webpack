@@ -82,7 +82,7 @@
                         show:false,
                         children:[
                             {
-                                subTitle:'文章列表',
+                                subTitle:'分类列表',
                                 navTo:'/conManage/conList'
                             },
                             {

@@ -5,5 +5,5 @@ const article_url={
     getCategory:'getCategoryList',
     addCategory:'addCategory'
 };
-export const getCategoryList = params =>request(url+article_url.getCategory,'get',params);
+export const getCategoryList = params =>request(url+article_url.getCategory,'post',params);
 export const addCategory = params =>request(url+article_url.addCategory,'post',params);
