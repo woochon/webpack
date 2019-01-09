@@ -3,7 +3,11 @@ const url = 'http://localhost:3000/';
 /* 文章模块 */
 const article_url={
     getCategory:'getCategoryList',
-    addCategory:'addCategory'
+    addCategory:'addCategory',
+    editorCategory:'editorCategory',
+    removeCategory:'removeCategory'
 };
 export const getCategoryList = params =>request(url+article_url.getCategory,'post',params);
 export const addCategory = params =>request(url+article_url.addCategory,'post',params);
+export const editorCategory = params =>request(url+article_url.editorCategory,'post',params);
+export const removeCategory = params =>request(url+article_url.removeCategory,'post',params);

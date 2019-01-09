@@ -96,8 +96,9 @@
     justify-content: center;
     align-items: center;
     .dialog-wrapper{
-      width: 300px;
-      height: 400px;
+      width: 10px;
+      height: 10px;
+      /*overflow: hidden;*/
       background-color: #fff;
     }
   }
