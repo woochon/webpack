@@ -46,6 +46,7 @@
                 categoryName:'',
                 keywords:'',
                 select:'0',
+                routeList:'gf',
                 state:false,
                 description:'',
                 categoryGroup:[
@@ -64,11 +65,28 @@
                 ]
             }
         },
+        watch:{
+            /*$route(val){
+                console.log(val);
+                console.log(this.$route.meta.routeList,'=====');
+            }*/
+            $route:{
+                handler(newV,oldV){
+                    console.log(newV);
+                    console.log(this.$route.meta.routeList,'=====');
+                },
+                deep:true
+            }
+        },
         created(){
-            getCategoryList({mode:'0'}).then(res=>{
+            /*getCategoryList({mode:'0'}).then(res=>{
                 console.log(res);
                 this.categoryGroup=res.data;
-            })
+            })*/
+            console.log('-=====');
+        },
+        mounted(){
+            console.log(this.routeList,'||||||');
         },
         methods:{
             getChange(data){
@@ -127,8 +145,15 @@
                 }
             }
 
+        },
+        beforeRouteEnter(to,form ,next){
+            next(vm=>{
+                console.log(to.meta.routeList,'qqqqq');
+                vm.routeList = to.meta.routeList
+            })
         }
     }
+
     /* ObjectId("5c2e0a28a80cdf129274cd7f") */
 </script>
 <style lang="scss" type="text/scss" scoped>

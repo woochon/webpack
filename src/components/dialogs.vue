@@ -4,10 +4,20 @@
       <slot name="headers"></slot>
       <slot name="contents"></slot>
       <slot name="footers"></slot>
+      <!--<template scope="scope">
+        <slot-render :slotf="headers"></slot-render>
+      </template>
+      <template scope="scope">
+        <slot-render :slotf="contents"></slot-render>
+      </template>
+      <template scope="scope">
+        <slot-render :slotf="footers"></slot-render>
+      </template>-->
     </div>
   </div>
 </template>
 <script>
+  /*import slotRender from './slotRender'*/
   export default{
     name:'dialogs',
     props:{
@@ -66,6 +76,9 @@
         }*/
       }
     },
+    components:{
+        /*slotRender*/
+    },
     mounted(){
       this.showDialog=this.value;
       /* 如果页面不允许滚动时，写在这里会导致在弹框没有出现的时候页面就没有滚动条 */
@@ -73,9 +86,12 @@
         console.log('can scroll');
         document.body.style.overflowY='scroll'
       }else{
-        console.log("can't scroll");
-        document.body.style.overflowY='hidden';
-      }*/
+            console.log("can't scroll");
+            document.body.style.overflowY='hidden';
+        }*/
+      /*this.headers=this.$slots.headers;
+      this.contents=this.$slots.contents;
+      this.footers=this.$slots.footers;*/
     },
     beforeDestroy(){
       document.body.style.overflow='scroll';
@@ -98,7 +114,7 @@
     .dialog-wrapper{
       width: 10px;
       height: 10px;
-      /*overflow: hidden;*/
+      overflow: hidden;
       background-color: #fff;
     }
   }

@@ -77,7 +77,7 @@
                     },
                     {
                         icon:'glyphicon-film',
-                        mainTitle:'文章管理',
+                        mainTitle:'分类管理',
                         navTo:'/home',
                         show:false,
                         children:[
@@ -95,6 +95,22 @@
                             }
                         ]
                     },
+                    {
+                        icon:'glyphicon-signal',
+                        mainTitle:'统计管理',
+                        navTo:'/home',
+                        show:false,
+                        children:[
+                            {
+                                subTitle:'加载统计',
+                                navTo:'/statistical/time'
+                            },
+                            {
+                                subTitle:'错误统计',
+                                navTo:'/statistical/error'
+                            }
+                        ]
+                    }
                 ]
             }
         },
