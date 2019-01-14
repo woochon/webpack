@@ -7,40 +7,105 @@
     <div class="main-wrapper">
       <div class="item">
         <label for="email">邮　箱:</label>
-        <input type="text" id="email" class="theme" placeholder="请输入邮箱">
+        <input type="text" id="email" class="theme" placeholder="请输入邮箱" v-model="email" @blur="validateUser">
       </div>
       <div class="item">
-      <label for="pwd">邮　箱:</label>
-      <input type="text" id="pwd" class="theme" placeholder="请输入邮箱">
+      <label for="pwd">密　码:</label>
+      <input type="text" id="pwd" class="theme" placeholder="请输入密码" v-model="password" @blur="validatePwd">
     </div>
       <div class="item">
         <label for="re_PWD">验证码:</label>
-        <input type="text" id="re_PWD" class="theme special" placeholder="请输入邮箱">
-        <!--<img src="../images/tmp.png" alt="" class="identify">-->
+        <input type="text" id="re_PWD" class="theme special" placeholder="请输入验证码" v-model="identify" @blur="validateIdentify">
         <span class="identify"></span>
       </div>
       <div class="error">
-        asdfa
+        {{warmMsg}}
       </div>
       <div class="btn-wrapper">
-        <div class="my-btn">登录</div>
+        <div class="my-btn" @click="login">登录</div>
       </div>
     </div>
   </div>
 </template>
 <script type="text/ecmascript-6">
-export default {
+  import { getIdentityCode,login } from "common/js/http";
+  import { isEmpty,validate } from "common/js/dom";
+
+  export default {
   name:"Login",
   data(){
     return {
-
+       warmMsg:'',
+       email:'',
+       password:'',
+       identify:'',
+        tmpIdentify:''
     };
   },
   created(){
-      console.log(this.$route.query.data);
-      const tmp=this.$route.query.data;
+      /*console.log(this.$route.query.data);
+      const tmp=this.$route.query.data;*/
       /*console.log(this.$decrypt(tmp));
       console.log(typeof(tmp),'======');*/
+      /* 发送请求获取验证码 */
+      /*getIdentityCode().then((res)=>{
+          console.log(res);
+          this.tmpIdentify = res.identify
+      });*/
+  },
+  methods:{
+      validateUser(){
+          this.warmMsg='';
+          if(isEmpty(this.email)){
+             this.warmMsg='邮箱不能为空';
+             return false;
+          }
+          let reg = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+          if(!validate(this.email,reg)){
+              this.warmMsg='邮箱格式不正确';
+              return false;
+          }
+          return true;
+      },
+      validatePwd(){
+          this.warmMsg='';
+          if(isEmpty(this.password)){
+              this.warmMsg='密码不能为空';
+              return false;
+          }
+          const reg = /^[\x21-\x7e]{6,12}$/;
+          if(!validate(this.email,reg)){
+              this.warmMsg='密码格式不正确';
+              return false;
+          }
+          return true;
+      },
+      validateIdentify(){
+          this.warmMsg='';
+          if(isEmpty(this.identify)){
+              this.warmMsg='验证码不能为空';
+              return false;
+          }
+          const reg = /^[0-9a-zA-Z]{6}$/;
+          if(!validate(this.email,reg)){
+              this.warmMsg='验证码格式不正确';
+              return false;
+          }
+          return true;
+      },
+      login(){
+          console.log('login');
+          /*if(this.validateUser()&&this.validatePwd()&&this.validateIdentify()){
+             login({
+                 userName:this.email,
+                 password:this.password,
+                 identify:this.identify
+             }).then(res=>{
+                 console.log(res);
+             })
+          }*/
+
+      }
   }
 };
 </script>

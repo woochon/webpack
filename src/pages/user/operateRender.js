@@ -269,6 +269,7 @@ import {hasClass,toggleClass} from "../../common/js/dom";
 
 export default{
     render(h){
+        let _this=this;
         return h(
             'div',
             {
@@ -278,9 +279,28 @@ export default{
                 h(
                     'span',
                     {
+                        style:{
+                            background:'#d93f30',
+                            display:'inline-block',
+                            width:'40px',
+                            lineHeight:'30px',
+                            cursor:'pointer',
+                            marginRight:'10px',
+                            textAlign:'center',
+                            color:'#fff'
+                        },
                         on:{
                             click:function(){
                                 console.log('按钮一');
+                                console.log(_this.item);
+                                console.log(_this.state);
+                                if(_this.state){
+                                    console.log('去禁止');
+                                    _this.$emit('message',{state:2,data:_this.item});
+                                }else{
+                                    console.log('去激活');
+                                    _this.$emit('message',{state:3,data:_this.item});
+                                }
                             }
                         }
                     },
@@ -289,13 +309,22 @@ export default{
                 h(
                     'span',
                     {
+                        style:{
+                            background:'#2c3f55',
+                            display:'inline-block',
+                            width:'40px',
+                            lineHeight:'30px',
+                            cursor:'pointer',
+                            textAlign:'center',
+                            color:'#fff'
+                        },
                         on:{
-                            click:function(event){
+                            /*click:function(event){
                                 console.log('按钮二');
                                 console.log(event);
                                 toggleClass(event.target,'haha')
-
-                            }
+                            }*/
+                            click:this.clickHandle0
                         }
                     },
                     this.state===0?'删除':'编辑'
@@ -304,14 +333,27 @@ export default{
         )
     },
     props:{
-        state:{
-            type:Number,
+        item:{
+            type:Object,
             require:true
+        }
+    },
+    computed:{
+        state(){
+            return this.item.state;
         }
     },
     methods: {
         clickHandle0() {
-            this.$emit('message','state==0 激活')
+            console.log(this.item);
+            // this.$emit('message','state==0 激活');
+            if(this.state){
+                console.log('去编辑');
+                this.$emit('message',{state:0,data:this.item});
+            }else{
+                console.log('去删除');
+                this.$emit('message',{state:1,data:this.item});
+            }
         },
         clickHandle1() {
             this.$emit('message','state==0 删除')
@@ -322,7 +364,5 @@ export default{
         clickHandle3() {
             this.$emit('message','state==1 编辑')
         },
-
-
     }
 }

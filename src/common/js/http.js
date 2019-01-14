@@ -1,5 +1,15 @@
 import request from './axios';
 const url = 'http://localhost:3000/';
+
+/* 用户模块 */
+const user_url = {
+    getIdentityCode:'getIdentityCode',
+    login:'login'
+};
+export const getIdentityCode = params =>request(url+user_url.getIdentityCode,'post',params);
+export const login = params =>request(url+user_url.login,'post',params);
+
+
 /* 文章模块 */
 const article_url={
     getCategory:'getCategoryList',

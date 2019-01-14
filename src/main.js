@@ -8,6 +8,11 @@ import '../ueditor1_4_3_3/ueditor.all';
 import '../ueditor1_4_3_3/zh-cn/zh-cn';
 import '../ueditor1_4_3_3/ueditor.parse';*/
 
+import {IdCodeValid} from  './common/js/idCard';
+if(IdCodeValid('420983199106102435').pass){
+    console.log('身份证号码符合要求');
+}
+
 Vue.prototype.$decrypt=AES.Decrypt;
 Vue.prototype.$encrypt=AES.Encrypt;
 
