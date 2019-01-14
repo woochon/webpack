@@ -16,7 +16,7 @@
       <div class="item">
         <label for="re_PWD">验证码:</label>
         <input type="text" id="re_PWD" class="theme special" placeholder="请输入验证码" v-model="identify" @blur="validateIdentify">
-        <span class="identify"></span>
+        <img class="identify" src="http://localhost:3000/getIdentityCode"></img>
       </div>
       <div class="error">
         {{warmMsg}}
@@ -50,7 +50,7 @@
       /* 发送请求获取验证码 */
       /*getIdentityCode().then((res)=>{
           console.log(res);
-          this.tmpIdentify = res.identify
+          this.tmpIdentify = res;
       });*/
   },
   methods:{
@@ -74,7 +74,7 @@
               return false;
           }
           const reg = /^[\x21-\x7e]{6,12}$/;
-          if(!validate(this.email,reg)){
+          if(!validate(this.password,reg)){
               this.warmMsg='密码格式不正确';
               return false;
           }
@@ -86,8 +86,8 @@
               this.warmMsg='验证码不能为空';
               return false;
           }
-          const reg = /^[0-9a-zA-Z]{6}$/;
-          if(!validate(this.email,reg)){
+          const reg = /^[0-9a-zA-Z]{4}$/;
+          if(!validate(this.identify,reg)){
               this.warmMsg='验证码格式不正确';
               return false;
           }
@@ -95,15 +95,20 @@
       },
       login(){
           console.log('login');
-          /*if(this.validateUser()&&this.validatePwd()&&this.validateIdentify()){
+          if(this.validateUser()&&this.validatePwd()){
              login({
                  userName:this.email,
                  password:this.password,
                  identify:this.identify
              }).then(res=>{
                  console.log(res);
+                 if(res.code===0){
+                     this.$router.push({path:'/home'});
+                 }else{
+                     this.warmMsg=res.message;
+                 }
              })
-          }*/
+          }
 
       }
   }
@@ -158,7 +163,7 @@
             background-color: $color-background;
             margin-left: 35px;
             position: relative;
-            top: 7px;
+            top: 0;
           }
           .error{
             padding-left: 0px;

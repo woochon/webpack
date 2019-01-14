@@ -6,7 +6,7 @@ const user_url = {
     getIdentityCode:'getIdentityCode',
     login:'login'
 };
-export const getIdentityCode = params =>request(url+user_url.getIdentityCode,'post',params);
+export const getIdentityCode = params =>request(url+user_url.getIdentityCode,'get',params);
 export const login = params =>request(url+user_url.login,'post',params);
 
 
