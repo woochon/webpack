@@ -11,12 +11,13 @@
       </div>
       <div class="item">
       <label for="pwd">密　码:</label>
-      <input type="text" id="pwd" class="theme" placeholder="请输入密码" v-model="password" @blur="validatePwd">
+      <input type="password" id="pwd" class="theme" placeholder="请输入密码" v-model="password" @blur="validatePwd">
     </div>
       <div class="item">
         <label for="re_PWD">验证码:</label>
         <input type="text" id="re_PWD" class="theme special" placeholder="请输入验证码" v-model="identify" @blur="validateIdentify">
-        <img class="identify" src="http://localhost:3000/getIdentityCode"></img>
+        <!--<img class="identify" src="http://localhost:3000/getIdentityCode">-->
+        <span v-html="tmpIdentify" class="identify" @click="getCode"></span>
       </div>
       <div class="error">
         {{warmMsg}}
@@ -30,7 +31,7 @@
 <script type="text/ecmascript-6">
   import { getIdentityCode,login } from "common/js/http";
   import { isEmpty,validate } from "common/js/dom";
-
+  import  tools  from 'common/js/tools';
   export default {
   name:"Login",
   data(){
@@ -39,7 +40,8 @@
        email:'',
        password:'',
        identify:'',
-        tmpIdentify:''
+        tmpIdentify:'',
+        codeText:''
     };
   },
   created(){
@@ -47,13 +49,17 @@
       const tmp=this.$route.query.data;*/
       /*console.log(this.$decrypt(tmp));
       console.log(typeof(tmp),'======');*/
-      /* 发送请求获取验证码 */
-      /*getIdentityCode().then((res)=>{
-          console.log(res);
-          this.tmpIdentify = res;
-      });*/
+      this.getCode();
   },
   methods:{
+      getCode(){
+          /* 发送请求获取验证码 */
+          getIdentityCode().then((res)=>{
+              console.log(res);
+              this.tmpIdentify = res.data;
+              this.codeText = res.text;
+          });
+      },
       validateUser(){
           this.warmMsg='';
           if(isEmpty(this.email)){
@@ -95,15 +101,19 @@
       },
       login(){
           console.log('login');
-          if(this.validateUser()&&this.validatePwd()){
+          if(this.validateUser()&&this.validatePwd()&&this.validateIdentify()){
+              if(this.codeText.toLocaleLowerCase() !==this.identify.toLowerCase()){
+                  this.warmMsg='验证码不正确';
+                  return ;
+              }
              login({
                  userName:this.email,
-                 password:this.password,
+                 password:tools.md5(this.password),
                  identify:this.identify
              }).then(res=>{
                  console.log(res);
                  if(res.code===0){
-                     this.$router.push({path:'/home'});
+                     this.$router.push({path:'/home/personCenter'});
                  }else{
                      this.warmMsg=res.message;
                  }
@@ -163,7 +173,8 @@
             background-color: $color-background;
             margin-left: 35px;
             position: relative;
-            top: 0;
+            top: 7px;
+            cursor: pointer;
           }
           .error{
             padding-left: 0px;

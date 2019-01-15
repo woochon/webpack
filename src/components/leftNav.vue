@@ -30,12 +30,12 @@
                         show:true,
                         children:[
                             {
-                                subTitle:'管理列表',
-                                navTo:'/home/manage'
-                            },
-                            {
                                 subTitle:'个人中心',
                                 navTo:'/home/personCenter'
+                            },
+                            {
+                                subTitle:'管理列表',
+                                navTo:'/home/manage'
                             }
                         ]
                     },
