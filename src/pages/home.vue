@@ -9,8 +9,12 @@
         </div>
       </div>
       <div class="right">
-        <img src="../images/dojo.png" alt="头像" class="agv">
-        <span class="name">woochon</span>
+        <img src="../images/dojo.png" alt="头像" v-if="!avatar" class="agv">
+        <!--<img :src="avatar" alt="头像" v-else class="agv">-->
+        <span class="name">
+          <span>woochon</span>
+          <span @click="logout">退出</span>
+        </span>
       </div>
     </div>
     <div class="m-main">
@@ -25,6 +29,7 @@
 </template>
 <script>
 import leftNav from 'components/leftNav';
+import myStore from 'common/js/myStore'
 export default {
   name:"Count",
   data(){
@@ -32,9 +37,25 @@ export default {
 
     };
   },
-    components:{
-      leftNav
-    }
+  components:{
+        leftNav
+  },
+    computed:{
+      isLogin(){
+          return myStore.getCookie('userId');
+      },
+      avatar(){
+          /*return JSON.parse(myStore.getStore('userInfo')).avatar;*/
+          return false;
+      }
+    },
+  methods:{
+      logout(){
+        myStore.deleteCookie('userId');
+        myStore.removeStore('userInfo');
+        this.$router.push({path:'/login'});
+      }
+  }
 };
 </script>
 <style lang="scss" type="text/scss" scoped>
@@ -80,10 +101,16 @@ export default {
         .agv{
           width: 40px;
           height: 40px;
-          margin-right: 20px;
         }
         .name{
-          font-size: $font-size-large-x;
+          width: 90px;
+          display: flex;
+          height: 44px;
+          line-height: 44px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: $font-size-medium;
           color: $color-text-ll;
         }
       }

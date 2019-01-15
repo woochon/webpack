@@ -32,6 +32,7 @@
   import { getIdentityCode,login } from "common/js/http";
   import { isEmpty,validate } from "common/js/dom";
   import  tools  from 'common/js/tools';
+  import myStore from "../common/js/myStore";
   export default {
   name:"Login",
   data(){
@@ -113,6 +114,8 @@
              }).then(res=>{
                  console.log(res);
                  if(res.code===0){
+                     /*myStore.addCookie('userId',res.userId);
+                     myStore.setStore(res);*/
                      this.$router.push({path:'/home/personCenter'});
                  }else{
                      this.warmMsg=res.message;

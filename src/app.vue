@@ -22,7 +22,7 @@ export default{
   }
   #app{
     min-height: 500px;
-    width: 1500px;
+    width: 1200px;
     height: 100%;
     background-color: #2c3f55;
     margin: 0 auto;
