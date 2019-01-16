@@ -92,6 +92,10 @@ states:['禁止','激活']
 
 ## 使用axiso进行数据访问
 
+## 文件上传一直出现问题
+- x-www-form-urlencoded
+- form-data
+
 
 
 
